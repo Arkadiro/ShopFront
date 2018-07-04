@@ -1,0 +1,79 @@
+{
+    "data": [
+      {
+        "name": "Smartphone Samsung Galaxy S9 PLUS (Ultraviolet)",
+        "shop_name": "SUPERSHOP",
+        "rating": "",
+        "price": "$400.99",
+        "special_price": "$299.50",
+        "image": "/assets/products/ph_apple.jpg",
+        "tag": "apple"
+      },
+      {
+        "name": "Smartphone Samsung Galaxy S9 PLUS (Ultraviolet)",
+        "shop_name": "SUPERSHOP",
+        "rating": "",
+        "price": "$29.50",
+        "special_price": "$29.50",
+        "image": "/assets/products/ph_britva.jpg",
+        "tag": "britva"
+      },
+      {
+        "name": "Smartphone Samsung Galaxy S9 PLUS (Ultraviolet)",
+        "shop_name": "SUPERSHOP",
+        "rating": "",
+        "price": "$66.50",
+        "special_price": "$66.50",
+        "image": "/assets/products/shower.jpg",
+        "tag": "deppa"
+      },
+      {
+        "name": "Smartphone Samsung Galaxy S9 PLUS (Ultraviolet)",
+        "shop_name": "SUPERSHOP",
+        "rating": "",
+        "price": "799.50",
+        "special_price": "$799.50",
+        "image": "/assets/products/ph_macbook.jpg",
+        "tag": "macbook"
+      },
+      {
+        "name": "Smartphone Samsung Galaxy S9 PLUS (Ultraviolet)",
+        "shop_name": "SUPERSHOP",
+        "rating": "",
+        "price": "$39.50",
+        "special_price": "$39.50",
+        "image": "/assets/products/ph_sound.jpg",
+        "tag": "sound"
+      },
+      {
+        "name": "Smartphone Samsung Galaxy S9 PLUS (Ultraviolet)",
+        "shop_name": "SUPERSHOP",
+        "rating": "",
+        "price": "$400.99",
+        "special_price": "$299.50",
+        "image": "/assets/products/ph_apple.jpg",
+        "tag": "apple"
+      },
+      {
+        "name": "Smartphone Samsung Galaxy S9 PLUS (Ultraviolet)",
+        "shop_name": "SUPERSHOP",
+        "rating": "",
+        "price": "$29.50",
+        "special_price": "$29.50",
+        "image": "/assets/products/ph_britva.jpg",
+        "tag": "britva"
+      },
+      {
+        "name": "Smartphone Samsung Galaxy S9 PLUS (Ultraviolet)",
+        "shop_name": "SUPERSHOP",
+        "rating": "",
+        "price": "$66.50",
+        "special_price": "$66.50",
+        "image": "/assets/products/shower.jpg",
+        "tag": "deppa"
+      }
+    ]
+  }
+
+  
+  

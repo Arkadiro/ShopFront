@@ -1,0 +1,44 @@
+@import 'colors';
+
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+}
+
+img {
+    display:block;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+.container {
+    width:80%;
+    margin-left:auto;
+    margin-right: auto;
+}
+
+.block {
+    width: 100%;
+    display: flex;
+    align-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.item{
+    width: 180px;
+    height: auto;
+    margin: 20px 20px;
+    //background-color: $mainColor;
+}
+#authmsg{
+    display: none;
+}
+#authmsgok{
+    display: none;
+}
