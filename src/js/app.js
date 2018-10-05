@@ -19,6 +19,8 @@ const div = document.createElement('div');
 const auth = document.getElementById('auth');
 const authmsg = document.getElementById('authmsg');
 const authmsgok = document.getElementById('authmsgok');
+const globalName = document.querySelector("#auth input[name='login']");
+const globalEmail = document.querySelector("#auth input[name='email']")
 
 let token = JSON.parse(localStorage.getItem('token'));
 
@@ -83,8 +85,11 @@ showalert()
 function order(el) {
     el.preventDefault();
     const button = el.target.id;
+    let userName = {userName: JSON.parse(localStorage.getItem('userName'))};
     const purchase = products.data[button]
-    token = JSON.parse(localStorage.getItem('token'));
+    const order = Object.assign({}, purchase, userName)
+    let token = JSON.parse(localStorage.getItem('token'));
+    
 
     //const header = "Authorization": 'Bearer' ${token};
     //console.log(token);
@@ -93,7 +98,7 @@ function order(el) {
         url,
         method: 'post',
         headers: { 'Authorization': `Bearer ${token}` },
-        data: purchase
+        data: order
     })
         .then(function (response) {
             console.log(response);
@@ -108,8 +113,8 @@ function order(el) {
 
 
 function login(el) {
-    const name = document.querySelector("#auth input[name='login']").value;
-    const email = document.querySelector("#auth input[name='email']").value;
+    const name = globalName.value;
+    const email = globalEmail.value;
     el.preventDefault();
     axios({
         method: 'post',
@@ -120,7 +125,7 @@ function login(el) {
         }
     })
         .then(function (response) {
-            console.log(response);
+            localStorage.setItem('userName', JSON.stringify(response.data.auth['name']))
             localStorage.setItem('token', JSON.stringify(response.data.token))
             showalert();
         })
@@ -130,11 +135,27 @@ function login(el) {
 };
 
 function showalert() {
-    token = JSON.parse(localStorage.getItem('token'));
+    let token = JSON.parse(localStorage.getItem('token'));
+    let userName = JSON.parse(localStorage.getItem('userName'));
     console.log(token);
     if (token !== null) {
         authmsg.style.display = 'none';
         authmsgok.style.display = 'block';
+        authmsgok.innerHTML = `
+            <p>Hello, ${userName}</p>
+            <button id="logout">Logout</button>
+            `;
+        function logOut(){
+            document.getElementById('logout').addEventListener('click', function(){
+            console.log("hello")
+            localStorage.removeItem('token');
+            localStorage.removeItem('userName');
+            globalName.value = '';
+            globalEmail.value = '';
+            showalert();
+            })
+        }
+        logOut()
 
     } else {
         authmsgok.style.display = 'none';

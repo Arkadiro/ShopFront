@@ -27,3 +27,9 @@ img {
   width: 180px;
   height: auto;
   margin: 20px 20px; }
+
+#authmsg {
+  display: none; }
+
+#authmsgok {
+  display: none; }
