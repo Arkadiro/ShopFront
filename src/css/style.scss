@@ -1,44 +1,79 @@
-@import 'colors';
+@import "colors";
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-h1 {
-    text-align: center;
-}
+body {
+  width: 100%;
 
-img {
-    display:block;
-    margin-top: 30px;
+  #authmsg {
+    display: none;
+  }
+  
+  #authmsgok {
+    display: none;
+  }
+
+  #app {
+    margin: 0;
+    padding: 0;
+    background-color: #ccc;
+    height: 300px;
+    position: relative;
+
+    h1 {
+      margin: 0;
+      padding: 0;
+      background-color: #3c3c3c;
+      color: #fff;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      text-align: center;
+      display: block;
+      min-width: 200px;
+      transform: translateY(-50%) translateX(-50%);
+    }
+  }
+
+  .container {
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
-    width: 80%;
+
+    #app1 {
+      margin-top: 10px;
+
+      .block {
+        width: 100%;
+        display: flex;
+        align-content: space-between;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .item {
+          width: 180px;
+          margin: 20px 20px;
+          //background-color: $mainColor;
+          
+          img {
+            display: block;
+            margin-top: 30px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 80%;
+          }
+        }
+      }    
+    }
+  }
 }
 
-.container {
-    width:80%;
-    margin-left:auto;
-    margin-right: auto;
-}
 
-.block {
-    width: 100%;
-    display: flex;
-    align-content: space-between;
-    flex-wrap: wrap;
-    justify-content: center;
-}
 
-.item{
-    width: 180px;
-    height: auto;
-    margin: 20px 20px;
-    //background-color: $mainColor;
-}
-#authmsg{
-    display: none;
-}
-#authmsgok{
-    display: none;
-}
+
+
+
+
+
